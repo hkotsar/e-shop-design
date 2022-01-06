@@ -158,6 +158,7 @@
     margin-bottom: -3rem;
     display: flex;
     align-items: center;
+    
     z-index: 99997;
 
     nav {
@@ -166,8 +167,9 @@
         align-items: center;
         background: #fff;
         padding: 1.2rem 0rem;
+        width: 40rem;
         width: 100%;
-        margin: auto;
+        margin: 0;
     }
 
     &--link {
@@ -175,7 +177,7 @@
         flex-direction: column;
         text-decoration: none;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: $gray;
         font-weight: bold;
         margin: 0rem 2rem;
