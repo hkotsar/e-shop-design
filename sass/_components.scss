@@ -1,0 +1,300 @@
+.nav {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70rem;
+    height: 5rem;
+    background: #fff;
+    margin: auto;
+    border-radius: 20px;
+    z-index: 99999;
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+
+    @include respond(phone) {
+        display: none;
+    }
+
+    &__navi {
+       
+        display: flex;
+        width: 100%;
+        margin: 0rem 2rem;
+        margin-top: .2rem;
+    }
+
+    // CART BUTTON
+    &__btn {
+        background: $primary;
+        border: none;
+        padding: 2rem 2.5rem;
+        display: inline-block;
+        border-radius: 50%;
+        transition: all .2s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        outline: none;
+        cursor: pointer;
+
+        @include respond(phone) {
+            margin-top: -8rem;
+            padding: 1.7rem 2rem;
+            
+            
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10rem 20rem rgba(#333,.2);
+        }
+        
+        &--icon {
+            width: 4rem;
+            height: 4rem;
+
+            @include respond(phone) {
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+    }
+
+    &__link {
+        margin-top: 1.6rem;
+        position: relative;
+        display: flex;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        overflow: hidden;
+        width: 10rem;
+        margin: auto;
+        color: $gray;
+        text-align: center;
+        overflow: hidden;
+
+        @include respond(phone) {
+            font-size: 1rem;
+            width: 1rem;
+
+        }
+
+        &--icon {
+            width: 3rem;
+            height: 3rem;
+            fill: $gray;
+        }
+
+
+
+        &--visible {
+            display: inline-block;
+            padding: 2.6rem;
+            height: 100%;
+            width: 100%;
+            transition: all .2s;
+            opacity: 1;
+        }
+    
+        &--invisible {
+            display: inline-block;
+            position: absolute;
+            padding: 3rem 0rem;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: -110%;
+            transition: all .2s;
+            opacity: 0;
+        }
+
+        &:hover &--visible {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        &:hover &--invisible {
+            top: 0;
+            opacity: 1;
+        }
+
+    }
+
+   
+}
+
+// CART
+.cart {
+    position: fixed;
+    background: #fff;
+    height: 30rem;
+    width: 40rem;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 27rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+    z-index: 9998;
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+
+    animation-name: visibleIn2;
+    animation-duration: 1s;
+
+   &__active {
+      display: block;
+   }
+
+   &__container {
+       width: 100%;
+   }
+}
+
+// Phone responive navigation
+.phone__nav {
+    width: 100%;
+    height: 14rem;
+    display: flex;
+    margin-bottom: -3rem;
+    display: flex;
+    align-items: center;
+    z-index: 99997;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 1.2rem 0rem;
+        width: 100%;
+        margin: auto;
+    }
+
+    &--link {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        align-items: center;
+        font-size: 1.5rem;
+        color: $gray;
+        font-weight: bold;
+        margin: 0rem 2rem;
+    }
+}
+
+// LANDPAGE TITLES
+.titles {
+    display: flex;
+    color: #fff;
+    margin-bottom: 3rem;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
+    &__1 {
+        font-size: 4.2rem;
+        font-weight: 500;
+
+        animation-name: visibleIn;
+        animation-duration: 4s;
+
+        @include respond(tab-land) {
+            font-size: 5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 3.2rem
+        }
+
+       
+    }
+
+    &__2 {
+        margin-left: 2rem;
+        font-size: 3rem;
+
+        animation-name: movesInLeft2;
+        animation-duration: 4s;
+
+        @include respond(tab-land) {
+            font-size: 3.5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+       
+    }
+
+    &__line {
+        width: 100%;
+        height: 7px;
+        border-radius: 20px;
+        background: $primary-blue;
+
+        animation-name: lineToRight;
+        animation-duration: 3s;
+    }
+}
+
+
+// ANIMATIONS
+@keyframes lineToRight {
+    0% {
+        opacity: 0;
+        width: 0%;
+        transform: translate(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        width: 100%;
+        transform: translate(0);
+    }
+}
+
+@keyframes movesInLeft2 {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+        
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes visibleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        
+    }
+}
+
+@keyframes visibleIn2 {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+}

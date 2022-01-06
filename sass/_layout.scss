@@ -1,0 +1,134 @@
+.navigation__section {
+    margin-top: 3rem;
+    position: fixed;
+    width: 100%;
+}
+
+.phone {
+    display: none;
+
+    @include respond(phone) {
+        position: fixed;
+        display: flex;
+        bottom: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+.landpage {
+    height: 70vh;
+    background-image: url('../img/sincerely-media-4dSXcNTyXaI-unsplash.jpg');
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0rem 5rem;
+    overflow: hidden;
+
+    @include respond(tab-land) {
+        
+        
+        height: 80vh;
+    }
+
+    @include respond(tab-port) {
+        flex-direction: column-reverse;
+        // flex-wrap: wrap-reverse;
+    }
+
+    @include respond(big-desktop) {
+        height: 60vh;
+    }
+
+   
+
+    &__center {
+        display: flex;
+        flex: 0 0 50%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        height: 10rem;
+        justify-content: center;
+
+        @include respond(tab-land) {
+            margin: 0;
+            margin-top: 4rem;
+            height: auto;
+        }
+    }
+
+    &__dog {
+        display: flex;
+        margin-top: auto;
+        height: 70%;
+
+        animation-name: movesInRight;
+        animation-duration: 3s;
+
+        
+        @include respond(tab-port) {
+            height: auto;
+            width: 35rem;
+        }
+
+        @include respond(phone) {
+            height: auto;
+            width: 30rem;
+        }
+    }
+
+    &__phone {
+        display: flex;
+        margin-left: auto;
+        width: auto;
+        height: 60%;
+        transform: rotate(310deg);
+        margin-right: 5rem;
+
+        animation-name: movesInLeft;
+        animation-duration: 3s;
+
+        
+
+        @include respond(tab-port) {
+            display: none;
+            width: 25rem;
+            transform: rotate(310deg);
+        }
+
+        @include respond(phone) {
+            height: 20rem;
+            margin-left: auto;
+            display: none;
+        }
+    }
+}
+
+@keyframes movesInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+        
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        
+    }
+}
+
+@keyframes movesInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(120px);
+        
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        transform: rotate(310deg);
+    }
+}

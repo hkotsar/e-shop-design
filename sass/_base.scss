@@ -1,0 +1,95 @@
+$primary: #86C232;
+$primary-bacground: #eeee;
+$primary-blue: #0064E5; 
+$gray: #222629;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //1rem = 10px/16px = 62.5%
+    
+    @include respond(tab-port) {
+        font-size: 50%; //1rem = 8px; 6/16 = 50%
+    }
+
+    @include respond(tab-land) {
+        font-size: 50%; //1rem = 9px
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12px
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 1.7;
+    box-sizing: border-box;
+    background: $primary-bacground;
+}
+
+
+
+.btn {
+
+    &,
+    &:link {
+        font-size: 1.6rem;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        transition: all .2s;
+        text-decoration: none;
+
+        animation-name: movesToUp;
+        animation-duration: 2s;
+
+        @include respond(tab-port) {
+            font-size: 2.5em;
+        }
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+        }
+
+       
+    }
+
+    &--blue {
+        background: $primary-blue;
+        color: #fff;
+    }
+
+    &--long {
+       
+       padding: 1.2rem 6rem;
+
+        @include respond(phone) {
+            padding: 1.2rem 4rem;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10rem 20rem rgba(#333,.2);
+    }
+}
+
+@keyframes movesToUp {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
