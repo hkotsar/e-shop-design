@@ -163,13 +163,13 @@
 
     nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         background: #fff;
-        padding: 1.2rem 0rem;
+        padding: 1.2rem 1.5rem;
         width: 40rem;
         width: 100%;
-        margin: 0;
+        
     }
 
     &--link {
