@@ -28,10 +28,17 @@
                     </span>
                     <span class="nav__link--invisible">PRODUCTS</span>
                 </a>
-                <button id="cartBtn" class="nav__btn">
-                    <svg class="nav__btn--icon">
-                        <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
-                    </svg>
+                <button class="nav__btn cartBtn">
+                    <span class="cartIcon-1 nav__btn--visible-1">
+                        <svg class="nav__btn--icon">
+                            <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                        </svg>
+                    </span>
+                    <span class="cartIcon-2 nav__btn--invisible-2">
+                        <svg class="nav__btn--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </span>
                 </button>
                 <a class="nav__link" href="#">
                     <span class="nav__link--visible">
@@ -75,10 +82,17 @@
                         </span>
                         <span>PRODUCTS</span>
                     </a>
-                    <button id="cartBtn" class="nav__btn">
-                        <svg class="nav__btn--icon">
-                            <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
-                        </svg>
+                    <button class="nav__btn cartBtn">
+                        <span class="cartIconPhone-1 nav__btn--visible-1">
+                            <svg class="nav__btn--icon">
+                                <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                            </svg>
+                        </span>
+                        <span class="cartIconPhone-2 nav__btn--invisible-2">
+                            <svg class="nav__btn--icon">
+                                <use xlink:href="css/icons.svg#icon-clear"></use>
+                            </svg>
+                        </span>
                     </button>
                     <a class="phone__nav--link" href="#">
                         <span>
@@ -102,7 +116,48 @@
     </div>
     <div class="container">
         <div class="cart cart__hidden" id="cart">
-            <p>some text</p>
+            <div class="cart__list">
+                <div class="cart__item">
+                    <img class="cart__item--img" src="/img/iphone-12.png" alt="iphone">
+                    <span class="cart__item--qty">1x</span>
+                    <span class="cart__item--name">Iphone 12 64GB</span>
+                    <span class="cart__item--price">999.99€</span>
+                    <button class="cart__item--btn">
+                        <svg class="cart__item--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="cart__item">
+                    <img class="cart__item--img" src="/img/iphone13.png" alt="iphone">
+                    <span class="cart__item--qty">1x</span>
+                    <span class="cart__item--name">Iphone 13 Pro 64GB</span>
+                    <span class="cart__item--price">999.99€</span>
+                    <button class="cart__item--btn">
+                        <svg class="cart__item--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="cart__item">
+                    <img class="cart__item--img" src="/img/iphone12_256gb.png" alt="iphone">
+                    <span class="cart__item--qty">1x</span>
+                    <span class="cart__item--name">Iphone 12 256GB</span>
+                    <span class="cart__item--price">999.99€</span>
+                    <button class="cart__item--btn">
+                        <svg class="cart__item--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="cart__checkout">
+                <div class="cart__checkout--total">
+                    <span>Total:</span>
+                    <span>1999.98€</span>
+                </div>
+                <button class="cart__checkout--btn">Checkout</button>
+            </div>
         </div>
     </div>
     

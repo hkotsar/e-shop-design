@@ -25,6 +25,7 @@
 
     // CART BUTTON
     &__btn {
+        position: relative;
         background: $primary;
         border: none;
         padding: 2rem 2.5rem;
@@ -35,8 +36,37 @@
         outline: none;
         cursor: pointer;
 
+        &--visible-1 {
+            display: inline-block;
+            margin-top: .4rem;
+            transition: all .2s;
+            
+        }
+
+        &--invisible-1 {
+           
+            display: none;
+        }
+
+        &--invisible-2 {
+            
+            display: none;
+        }
+
+        &--visible-2 {
+            top: 0;
+            opacity: 1;
+            height: 100%;
+            width: 100%;
+            padding: 3rem 5rem;
+            display: inline-block;
+            margin-top: .4rem;
+            transition: all .2s;
+            
+        }
+        
         @include respond(phone) {
-            margin-top: -8rem;
+            margin-top: -6rem;
             padding: 1.7rem 2rem;
             
             
@@ -45,6 +75,7 @@
         &:hover {
             transform: translateY(-3px);
             box-shadow: 0 10rem 20rem rgba(#333,.2);
+           
         }
         
         &--icon {
@@ -126,20 +157,126 @@
 .cart {
     position: fixed;
     background: #fff;
-    height: 30rem;
-    width: 40rem;
+    height: 41rem;
+    width: 50rem;
     border-radius: 20px;
     margin: auto;
-    margin-top: 27rem;
+    margin-top: 32rem;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
+    font-weight: bold;
 
     z-index: 9998;
     box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
 
     animation-name: visibleIn2;
     animation-duration: 1s;
+
+    @include respond(phone) {
+        
+        width: 38rem;
+        height: 42rem;
+        top: 7%;
+        
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        padding: 1rem;
+        width: 100%;
+        height: 27rem;
+        overflow: auto;
+        
+    }
+
+    // CART ITEM
+    &__item {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+
+        &--img {
+            display: inline-block; 
+            position: relative; 
+            width: 5rem; 
+            height: 5rem; 
+            overflow: hidden; 
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        &--qty {
+            
+            margin-left: 1rem;
+            width: 2rem;
+            
+            
+        }
+
+        &--name {
+            width: 22rem;
+            
+
+            @include respond(phone) {
+                width: 15rem;
+            }
+        }
+
+        &--btn {
+            border: none;
+            background: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        &--icon {
+            width: 3.2rem;
+            height: 3.2rem;
+            fill: $gray;
+        }
+    }
+
+    // TOTAL > CHECKOUT
+    &__checkout {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        padding: 1rem;
+        
+
+        &--total {
+            text-align: center;
+            margin-top: .5rem;
+            font-size: 2rem;
+        }
+
+        &--btn {
+            margin-top: 1rem;
+            font-size: 1.6rem;
+            padding: 1.5rem;
+            background: $gray;
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            transition: all .2s;
+            cursor: pointer;
+            box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10rem 20rem rgba(#333,.2);
+               
+            }
+        }
+    }
 
    &__active {
       display: block;
@@ -153,9 +290,9 @@
 // Phone responive navigation
 .phone__nav {
     width: 100%;
-    height: 14rem;
+    height: 15rem;
     display: flex;
-    margin-bottom: -3rem;
+    margin-bottom: -4rem;
     display: flex;
     align-items: center;
     
