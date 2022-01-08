@@ -2,6 +2,7 @@
     margin-top: 3rem;
     position: fixed;
     width: 100%;
+    z-index: 99999;
 }
 
 .phone {
@@ -132,4 +133,8 @@
         transform: translate(0);
         transform: rotate(310deg);
     }
+}
+
+.container-2 {
+    padding: 10rem 0rem;
 }

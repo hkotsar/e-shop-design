@@ -82,6 +82,16 @@ body {
     }
 }
 
+.green {
+    background: $primary;
+    color: #000;
+}
+
+.blue {
+    background: $primary-blue;
+    color: #fff;
+}
+
 @keyframes movesToUp {
     0% {
         opacity: 0;
