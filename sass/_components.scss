@@ -450,6 +450,18 @@
         margin-left: 2rem;
     }
 
+    @include respond(big-desktop) {
+        width: 140rem;
+    }
+
+    @include respond(tab-land) {
+        width: 90rem;
+    }
+
+    @include respond(phone) {
+        width: 35rem;
+    }
+    
     
 }
 
@@ -464,6 +476,7 @@
     overflow: hidden;
     transition: width .4s;
     height: 100%;
+   
   }
   
   .slide {
@@ -493,14 +506,26 @@
     color: white;
     -webkit-user-select: none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    @include respond(phone) {
+
+    }
   }
   
   .nav-left {
-    left: -25px;
+    left: -2.5rem;
+
+    @include respond(phone) {
+        left: -1.7rem;
+    }
   }
   
   .nav-right {
-    right: -25px;
+    right: -2.5rem;
+
+    @include respond(phone) {
+        right: -1.7rem;
+    }
   }
   
   .carousel-arrow-icon-left {
@@ -522,6 +547,10 @@
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+
+    @include respond(tab-land) {
+        margin: 2rem auto;
+    }
     
 
    &__img {
