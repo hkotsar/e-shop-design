@@ -47,9 +47,9 @@ body {
         cursor: pointer;
         transition: all .2s;
         text-decoration: none;
+        font-weight: bold;
 
-        animation-name: movesToUp;
-        animation-duration: 2s;
+        
 
         @include respond(tab-port) {
             font-size: 2.5em;
@@ -70,10 +70,26 @@ body {
     &--long {
        
        padding: 1.2rem 6rem;
+       animation-name: movesToUp;
+        animation-duration: 2s;
 
         @include respond(phone) {
             padding: 1.2rem 4rem;
         }
+    }
+
+    &--product {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .7rem;
+        margin: .5rem 0rem;
+    }
+
+    &--icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: .7rem;
     }
 
     &:hover {
