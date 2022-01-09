@@ -589,10 +589,20 @@ body {
   .product__btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: .5rem;
-    font-weight: bold;
-    margin: .5rem 0rem; }
+    justify-content: center; }
+    .product__btn, .product__btn:link {
+      font-size: 1.6rem;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: all .2s;
+      text-decoration: none;
+      padding: .6rem;
+      font-weight: bold;
+      margin: .5rem 0rem; }
+    .product__btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10rem 20rem rgba(51, 51, 51, 0.2); }
     .product__btn--icon {
       width: 2.2rem;
       height: 2.2rem;
