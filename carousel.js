@@ -1,4 +1,7 @@
-var carousel = document.querySelector('.carousel1');
+const carousel = document.querySelector('.carousel');
+
+console.log(carousel)
+
 var carouselContent = document.querySelector('.carousel-content');
 var slides = document.querySelectorAll('.slide');
 var arrayOfSlides = Array.prototype.slice.call(slides);
@@ -6,6 +9,8 @@ var carouselDisplaying;
 var screenSize;
 setScreenSize();
 var lengthOfSlide;
+
+console.log(slides)
 
 function addClone() {
    var lastSlide = carouselContent.lastElementChild.cloneNode(true);
@@ -62,7 +67,10 @@ function setScreenSize() {
 function getScreenSize() {
   var slides = document.querySelectorAll('.slide');
   var slidesArray = Array.prototype.slice.call(slides);
-  lengthOfSlide = ( carousel.offsetWidth  / carouselDisplaying );
+
+  lengthOfSlide = ( 
+    carousel.offsetWidth  / carouselDisplaying 
+  );
   var initialWidth = -lengthOfSlide;
   slidesArray.forEach(function(el) {
     el.style.width = lengthOfSlide + "px";
@@ -70,6 +78,7 @@ function getScreenSize() {
     initialWidth += lengthOfSlide;
   });
 }
+
 
 
 var rightNav = document.querySelector('.nav-right');
