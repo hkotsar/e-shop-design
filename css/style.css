@@ -660,14 +660,19 @@ body {
         font-family: 'Lato', sans-serif;
         font-weight: bold;
         font-size: 1.6rem;
+        margin-bottom: .2rem;
         color: #86C232; }
       .contact__form--group input {
         width: 100%;
-        padding: .5rem;
+        padding: .8rem;
         border: none;
         background: none;
         outline: none;
         border-bottom: 2px solid #86C232; }
+        .contact__form--group input[type=text] {
+          color: #86C232; }
+        .contact__form--group input[type=email] {
+          color: #86C232; }
       .contact__form--group textarea {
         width: 100%;
         padding: 1rem;

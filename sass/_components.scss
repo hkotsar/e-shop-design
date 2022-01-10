@@ -669,18 +669,27 @@
                 font-family: 'Lato', sans-serif;
                 font-weight: bold;
                 font-size: 1.6rem;
+                margin-bottom: .2rem;
                 color: $primary;
             }
 
             input {
                 width: 100%;
-                padding: .5rem;
+                padding: .8rem;
                 border: none;
                 background: none;
                 outline: none;
                 border-bottom: 2px solid $primary;
-
                 
+                &[type=text] {
+                    color: $primary;
+                    
+
+                }
+
+                &[type=email] {
+                    color: $primary;
+                }
             }
 
             textarea {
