@@ -143,7 +143,21 @@
     }
 }
 
-.section-footer {
+.section-contact {
     padding: 6rem 0rem;
-    background: $gray;
+    background: #474B4F;
+}
+
+.section-footer {
+    padding: 8rem 0rem;
+    
+    background: #222629;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: auto;
+
+    @include respond(phone) {
+        padding-top: 5rem;
+        padding-bottom: 12rem;
+    }
 }
