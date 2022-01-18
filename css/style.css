@@ -837,6 +837,9 @@ body {
     margin-top: 1.2rem;
     display: flex;
     justify-content: center; }
+    @media (max-width: 37.5em) {
+      .pro__search {
+        width: 100%; } }
     .pro__search--icon {
       width: 2.2rem;
       height: 2.2rem; }
@@ -965,7 +968,7 @@ body {
       overflow-x: scroll;
       overflow-y: hidden;
       background: #fff;
-      height: 14rem; } }
+      height: 17rem; } }
   .pro-phone__nav {
     display: flex;
     width: 100%;
@@ -976,3 +979,12 @@ body {
     overflow-x: scroll;
     width: 100%;
     overflow-y: hidden; }
+  .pro-phone__close {
+    width: 4rem;
+    height: 4rem;
+    margin-top: 1.2rem;
+    margin-right: 2rem; }
+  .pro-phone__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }

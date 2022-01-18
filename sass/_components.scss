@@ -910,6 +910,10 @@
         display: flex;
         justify-content: center;
 
+        @include respond(phone) {
+            width: 100%;
+        }
+
         
 
         &--icon {
@@ -1091,7 +1095,7 @@
         overflow-x: scroll;
         overflow-y: hidden;
         background: #fff;
-        height: 14rem;
+        height: 17rem;
        
 
 
@@ -1111,5 +1115,18 @@
          overflow-x: scroll;
          width: 100%;
         overflow-y: hidden;
+    }
+
+    &__close {
+        width: 4rem;
+        height: 4rem;
+        margin-top: 1.2rem;
+        margin-right: 2rem;
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
