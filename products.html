@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-shop Products</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="navigation__section">
+        <div class="nav">
+            <nav class="nav__navi">
+                <a class="nav__link" href="index.html">
+                    <span class="nav__link--visible">
+                        <svg class="nav__link--icon">
+                            <use xlink:href="css/icons.svg#icon-home"></use>
+                        </svg>
+                    </span>
+                    <span class="nav__link--invisible">HOME</span>
+                </a>
+                <a class="nav__link" href="products.html">
+                    <span class="nav__link--visible">
+                        <svg class="nav__link--icon">
+                            <use xlink:href="css/icons.svg#icon-dashboard"></use>
+                        </svg>
+                    </span>
+                    <span class="nav__link--invisible">PRODUCTS</span>
+                </a>
+                <button class="nav__btn cartBtn">
+                    <span class="cartIcon-1 nav__btn--visible-1">
+                        <svg class="nav__btn--icon">
+                            <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                        </svg>
+                    </span>
+                    <span class="cartIcon-2 nav__btn--invisible-2">
+                        <svg class="nav__btn--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </span>
+                </button>
+                <a class="nav__link" href="index.html#contact">
+                    <span class="nav__link--visible">
+                        <svg class="nav__link--icon">
+                            <use xlink:href="css/icons.svg#icon-email"></use>
+                        </svg>
+                    </span>
+                    <span class="nav__link--invisible">CONTACT</span>
+                </a>
+                <a class="nav__link" href="#">
+                    <span class="nav__link--visible">
+                        <svg class="nav__link--icon">
+                            <use xlink:href="css/icons.svg#icon-person"></use>
+                        </svg>
+                    </span>
+                    <span class="nav__link--invisible">SIGN IN</span>
+                </a>
+    
+                <!-- <a class="nav__link" href="#">
+                    <span class="nav__link--visible">PRODUCT</span>
+                    <span class="nav__link--invisible">PRODUCT ICON</span>
+                </a> -->
+            </nav>
+        </div>
+        <div class="phone">
+            <div class="phone__nav">
+                <nav>
+                    <a class="phone__nav--link" href="#">
+                        <span>
+                            <svg class="nav__link--icon">
+                                <use xlink:href="css/icons.svg#icon-home"></use>
+                            </svg>
+                        </span>
+                        <span>HOME</span>
+                    </a>
+                    <a class="phone__nav--link" href="products.html">
+                        <span>
+                            <svg class="nav__link--icon">
+                                <use xlink:href="css/icons.svg#icon-dashboard"></use>
+                            </svg>
+                        </span>
+                        <span>PRODUCTS</span>
+                    </a>
+                    <button class="nav__btn cartBtn">
+                        <span class="cartIconPhone-1 nav__btn--visible-1">
+                            <svg class="nav__btn--icon">
+                                <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                            </svg>
+                        </span>
+                        <span class="cartIconPhone-2 nav__btn--invisible-2">
+                            <svg class="nav__btn--icon">
+                                <use xlink:href="css/icons.svg#icon-clear"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <a class="phone__nav--link" href="index.html#contact">
+                        <span>
+                            <svg class="nav__link--icon">
+                                <use xlink:href="css/icons.svg#icon-email"></use>
+                            </svg>
+                        </span>
+                        <span>CONTACT</span>
+                    </a>
+                    <a class="phone__nav--link" href="#">
+                        <span>
+                            <svg class="nav__link--icon">
+                                <use xlink:href="css/icons.svg#icon-person"></use>
+                            </svg>
+                        </span>
+                        <span>SIGNIN</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cart cart__hidden" id="cart">
+            <div class="cart__list">
+                <div class="cart__item">
+                    <img class="cart__item--img" src="/img/iphone-12.png" alt="iphone">
+                    <span class="cart__item--qty">1x</span>
+                    <span class="cart__item--name">Iphone 12 64GB</span>
+                    <span class="cart__item--price">999.99€</span>
+                    <button class="cart__item--btn">
+                        <svg class="cart__item--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="cart__item">
+                    <img class="cart__item--img" src="/img/iphone13.png" alt="iphone">
+                    <span class="cart__item--qty">1x</span>
+                    <span class="cart__item--name">Iphone 13 Pro 64GB</span>
+                    <span class="cart__item--price">999.99€</span>
+                    <button class="cart__item--btn">
+                        <svg class="cart__item--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="cart__item">
+                    <img class="cart__item--img" src="/img/iphone12_256gb.png" alt="iphone">
+                    <span class="cart__item--qty">1x</span>
+                    <span class="cart__item--name">Iphone 12 256GB</span>
+                    <span class="cart__item--price">999.99€</span>
+                    <button class="cart__item--btn">
+                        <svg class="cart__item--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="cart__checkout">
+                <div class="cart__checkout--total">
+                    <span>Total:</span>
+                    <span>1999.98€</span>
+                </div>
+                <button class="cart__checkout--btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+    <header class="landpage">
+        <div class="landpage__center">
+            <div class="titles">
+                <div>
+                    <span class="titles__3">Our Products</span>
+                </div>
+            </div>
+        </div>
+        <img style="margin-top: 10em;" class="landpage__phone" src="/img/phone2.png" alt="phone">
+    </header>
+    <section id="products">
+        <div class="pro">
+            <div class="pro__container">
+                <div class="pro__search">
+                    <button>
+                        <svg class="pro__search--icon">
+                            <use xlink:href="css/icons.svg#icon-search"></use>
+                        </svg>
+                    </button>
+                    <input type="text" placeholder="Search">
+                </div>
+                <nav class="pro__nav">
+                    <a class="pro__link pro__black" href="#">
+                        <span>All products</span>
+                        <svg class="pro__icon">
+                            <use xlink:href="css/icons.svg#icon-arrow_forward_ios"></use>
+                        </svg>
+                    </a>
+                    <a class="pro__link pro__green" href="#">
+                        <span>Newest products</span>
+                        <svg class="pro__icon">
+                            <use xlink:href="css/icons.svg#icon-arrow_forward_ios"></use>
+                        </svg>
+                    </a>
+                    <a class="pro__link pro__purple" href="#">
+                        <span>Best price products</span>
+                        <svg class="pro__icon">
+                            <use xlink:href="css/icons.svg#icon-arrow_forward_ios"></use>
+                        </svg>
+                    </a>
+                    <a class="pro__link--2 pro__white" href="#">
+                        <svg class="pro__logo">
+                            <use xlink:href="css/icons.svg#icon-appleinc"></use>
+                        </svg>
+                    </a>
+                    <a class="pro__link--2 pro__white" href="#">
+                        <svg class="pro__logo--2">
+                            <use xlink:href="css/icons.svg#icon-samsung"></use>
+                        </svg>
+                    </a>
+                    <a class="pro__link--2 pro__white" href="#">
+                        <svg class="pro__logo">
+                            <use xlink:href="css/icons.svg#icon-huawei"></use>
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <div class="pro-phone">
+            <p>sdsdf</p>
+            <div class="pro-phone__container">
+                <nav class="pro-phone__nav">
+                    <a class="pro__link pro__black" href="#">
+                        <span>All products</span>
+                       
+                    </a>
+                    <a class="pro__link pro__green" href="#">
+                        <span>Newest products</span>
+                        
+                    </a>
+                    <a class="pro__link pro__purple" href="#">
+                        <span>Best price products</span>
+                       
+                    </a>
+                    <a class="pro__link--2 pro__white" href="#">
+                        <svg class="pro__logo">
+                            <use xlink:href="css/icons.svg#icon-appleinc"></use>
+                        </svg>
+                    </a>
+                    <a class="pro__link--2 pro__white" href="#">
+                        <svg class="pro__logo--2">
+                            <use xlink:href="css/icons.svg#icon-samsung"></use>
+                        </svg>
+                    </a>
+                    <a class="pro__link--2 pro__white" href="#">
+                        <svg class="pro__logo">
+                            <use xlink:href="css/icons.svg#icon-huawei"></use>
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+            
+        </div>
+    </section>
+    <section class="section-products" id="products">
+        <div class="products">
+            
+            <div class="products__list">
+                <div class="product">
+                    <div class="product__img">
+                        <img src="img/iphone-12.png" alt="phone">
+                    </div>
+                   
+                    <div class="product__desc">
+                        <span class="product__desc--name">
+                            Iphone 13 Pro 64GB 
+                        </span>
+                        <span class="product__desc--price">
+                            999.99€
+                        </span>
+                    </div>
+                    <div class="product__btns">
+                        <a href="index.html" class="btn btn--product blue">
+                            <svg style="fill: #fff;" class="btn--icon">
+                                <use xlink:href="css/icons.svg#icon-launch"></use>
+                            </svg>
+                            <span>View details</span>
+                        </a>
+                        <a href="#" class="btn btn--product green">
+                            <svg class="btn--icon">
+                                <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                            </svg>
+                            <span>Add to cart</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product__img">
+                        <img src="img/iphone12_256gb.png" alt="phone">
+                    </div>
+                   
+                    <div class="product__desc">
+                        <span class="product__desc--name">
+                            Iphone 13 Pro 64GB 
+                        </span>
+                        <span class="product__desc--price">
+                            999.99€
+                        </span>
+                    </div>
+                    <div class="product__btns">
+                        <a href="index.html" class="btn btn--product blue">
+                            <svg style="fill: #fff;" class="btn--icon">
+                                <use xlink:href="css/icons.svg#icon-launch"></use>
+                            </svg>
+                            <span>View details</span>
+                        </a>
+                        <a href="#" class="btn btn--product green">
+                            <svg class="btn--icon">
+                                <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                            </svg>
+                            <span>Add to cart</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product__img">
+                        <img src="img/iphone13.png" alt="phone">
+                    </div>
+                   
+                    <div class="product__desc">
+                        <span class="product__desc--name">
+                            Iphone 13 Pro 64GB 
+                        </span>
+                        <span class="product__desc--price">
+                            999.99€
+                        </span>
+                    </div>
+                    <div class="product__btns">
+                        <a href="index.html" class="btn btn--product blue">
+                            <svg style="fill: #fff;" class="btn--icon">
+                                <use xlink:href="css/icons.svg#icon-launch"></use>
+                            </svg>
+                            <span>View details</span>
+                        </a>
+                        <a href="#" class="btn btn--product green">
+                            <svg class="btn--icon">
+                                <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                            </svg>
+                            <span>Add to cart</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product__img">
+                        <img src="img/iphone12_256gb-2.png" alt="phone">
+                    </div>
+                   
+                    <div class="product__desc">
+                        <span class="product__desc--name">
+                            Iphone 13 Pro 64GB 
+                        </span>
+                        <span class="product__desc--price">
+                            999.99€
+                        </span>
+                    </div>
+                    <div class="product__btns">
+                        <a href="index.html" class="btn btn--product blue">
+                            <svg style="fill: #fff;" class="btn--icon">
+                                <use xlink:href="css/icons.svg#icon-launch"></use>
+                            </svg>
+                            <span>View details</span>
+                        </a>
+                        <a href="#" class="btn btn--product green">
+                            <svg class="btn--icon">
+                                <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                            </svg>
+                            <span>Add to cart</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product__img">
+                        <img src="img/iphone12_256gb-2.png" alt="phone">
+                    </div>
+                   
+                    <div class="product__desc">
+                        <span class="product__desc--name">
+                            Iphone 13 Pro 64GB 
+                        </span>
+                        <span class="product__desc--price">
+                            999.99€
+                        </span>
+                    </div>
+                    <div class="product__btns">
+                        <a href="index.html" class="btn btn--product blue">
+                            <svg style="fill: #fff;" class="btn--icon">
+                                <use xlink:href="css/icons.svg#icon-launch"></use>
+                            </svg>
+                            <span>View details</span>
+                        </a>
+                        <a href="#" class="btn btn--product green">
+                            <svg class="btn--icon">
+                                <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                            </svg>
+                            <span>Add to cart</span>
+                        </a>
+                    </div>
+                </div>
+
+              
+                    <div class="product">
+                        <div class="product__img">
+                            <img src="img/iphone-xr-64gb.png" alt="phone">
+                        </div>
+                       
+                        <div class="product__desc">
+                            <span class="product__desc--name">
+                                Iphone 13 Mini 64GB 
+                            </span>
+                            <span class="product__desc--price">
+                                999.99€
+                            </span>
+                        </div>
+                        <div class="product__btns">
+                            <a href="index.html" class="btn btn--product blue">
+                                <svg style="fill: #fff;" class="btn--icon">
+                                    <use xlink:href="css/icons.svg#icon-launch"></use>
+                                </svg>
+                                <span>View details</span>
+                            </a>
+                            <a href="#" class="btn btn--product green">
+                                <svg class="btn--icon">
+                                    <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                                </svg>
+                                <span>Add to cart</span>
+                            </a>
+                        </div>
+                    </div>
+                  
+            </div>
+        </div>
+    </section>
+    <footer class="section-footer">
+        <div class="footer">
+            <div class="footer__social">
+                <nav class="footer__social--nav">
+                    <a class="footer__social--link" href="#">
+                        <svg class="footer__icon facebook">
+                            <use xlink:href="css/icons.svg#icon-facebook2"></use>
+                        </svg>
+                    </a>
+                    <a class="footer__social--link" href="#">
+                        <svg class="footer__icon">
+                            <use xlink:href="css/icons.svg#icon-youtube"></use>
+                        </svg>
+                    </a>
+                    <a class="footer__social--link" href="#">
+                        <svg class="footer__icon">
+                            <use xlink:href="css/icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+            <div class="footer__main">
+                <nav class="footer__main--nav">
+                    <a class="footer__main--link" href="#">Company</a>
+                    <a class="footer__main--link" href="#">Terms</a>
+                    <a class="footer__main--link" href="#">Privacy policy</a>
+                    <a class="footer__main--link" href="#">Contact us</a>
+                    <a class="footer__main--link" href="#">FAQs</a>
+                    <div class="footer__line"></div>
+                </nav>
+                <div class="footer__copyright">
+                    <span>Designed by <span style="color: #86C232;">Kotsar</span></span>
+                    <span>2021</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

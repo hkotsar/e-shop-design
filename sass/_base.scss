@@ -12,6 +12,7 @@ $gray: #222629;
 }
 
 html {
+    scroll-behavior: smooth;
     font-size: 62.5%; //1rem = 10px/16px = 62.5%
     
     @include respond(tab-port) {
@@ -33,6 +34,7 @@ body {
     line-height: 1.7;
     box-sizing: border-box;
     background: $primary-bacground;
+    overflow-x: hidden;
 }
 
 
@@ -92,6 +94,8 @@ body {
         justify-content: center;
         border-radius: 5px;
         width: 100%;
+
+        font-weight: normal;
         padding: 1rem;
     }
 

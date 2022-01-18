@@ -5,6 +5,8 @@ const invisbleIcon = document.querySelector('.cartIcon-2')
 const visibleIconPhone = document.querySelector('.cartIconPhone-1')
 const invisibleIconPhone = document.querySelector('.cartIconPhone-2')
 
+
+
 const visible = [visbleIcon, visibleIconPhone]
 const invisible = [invisbleIcon, invisibleIconPhone]
 
@@ -34,6 +36,25 @@ const toggleCart = function() {
 
 for (let i = 0; i < cartBtn.length; i++)
     cartBtn[i].addEventListener('click', toggleCart)
+
+
+const productionNavSection = document.querySelector('#products')
+
+const productNav = document.querySelector('.pro')
+const cordinates = productionNavSection.getBoundingClientRect()
+
+console.log(cordinates)
+console.log(productNav)
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY > cordinates.top) {
+        productNav.classList.add('pro__sticky')
+        console.log('hello')
+    } else {
+        productNav.classList.remove('pro__sticky')
+        console.log('sdsd')
+    }
+})
 
 
 
