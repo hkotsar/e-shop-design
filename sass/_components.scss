@@ -370,10 +370,11 @@
     &__3 {
         font-size: 5rem;
         background: $primary;
-        padding: 2rem 4rem;
+        padding: 1rem 2rem;
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         width: 35rem;
+        color: #fff;
 
         animation-name: movesInRight;
         animation-duration: 3s;
@@ -1196,15 +1197,24 @@
 }
 
 .filter {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
     margin-top: 2rem;
     margin-right: 2rem;
     transition: all .2s;
+    
+    @include respond(phone) {
+     display: flex;
+    }
+   
+
+   
+    
 
     &__btn {
-        padding: .8rem 1.2rem;
+        padding: .9rem 1.4rem;
         border-radius: 50%;
         border: none;
         background: $primary;

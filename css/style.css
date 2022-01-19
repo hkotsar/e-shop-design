@@ -477,10 +477,11 @@ body {
   .titles__3 {
     font-size: 5rem;
     background: #86C232;
-    padding: 2rem 4rem;
+    padding: 1rem 2rem;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 35rem;
+    color: #fff;
     animation-name: movesInRight;
     animation-duration: 3s; }
     @media (max-width: 37.5em) {
@@ -1031,14 +1032,18 @@ body {
     display: none; }
 
 .filter {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
   margin-top: 2rem;
   margin-right: 2rem;
   transition: all .2s; }
+  @media (max-width: 37.5em) {
+    .filter {
+      display: flex; } }
   .filter__btn {
-    padding: .8rem 1.2rem;
+    padding: .9rem 1.4rem;
     border-radius: 50%;
     border: none;
     background: #86C232;
