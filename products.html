@@ -115,7 +115,7 @@
             </div>
         </div>
     </div>
-
+   
     <div class="container">
         <div class="cart cart__hidden" id="cart">
             <div class="cart__list">
@@ -220,17 +220,24 @@
                 </nav>
             </div>
         </div>
-        <div class="pro-phone">
+        <div class="filter">
+            <button class="filter__btn">
+                <svg class="filter__icon">
+                    <use xlink:href="css/icons.svg#icon-filter_list"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="pro-phone pro-phone__hidden">
             <div class="pro-phone__flex">
-                <div class="pro__search">
+                <div class="pro-phone__search">
                     <button>
-                        <svg class="pro__search--icon">
+                        <svg class="pro-phone__search--icon">
                             <use xlink:href="css/icons.svg#icon-search"></use>
                         </svg>
                     </button>
                     <input type="text" placeholder="Search">
                 </div>
-                <a href="#">
+                <a class="filter__close" >
                     <svg class="pro-phone__close">
                         <use xlink:href="css/icons.svg#icon-clear"></use>
                     </svg>

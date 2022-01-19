@@ -56,7 +56,23 @@ window.addEventListener('scroll', function () {
     }
 })
 
+// PRODUCT FILTER (PHONE)
+const filter = document.querySelector('.pro-phone')
+const filterOpen = document.querySelector('.filter__btn')
+const filterClose = document.querySelector('.filter__close')
 
+console.log([filter, filterOpen, filterClose])
+
+const openFilter = function () {
+    filter.classList.remove('pro-phone__hidden')
+}
+
+const closeFilter = function () {
+    filter.classList.add('pro-phone__hidden')
+}
+
+filterOpen.addEventListener('click', openFilter);
+filterClose.addEventListener('click', closeFilter);
 
 
 
