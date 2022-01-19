@@ -486,7 +486,7 @@ body {
     animation-duration: 3s; }
     @media (max-width: 37.5em) {
       .titles__3 {
-        width: 10rem;
+        width: 100%;
         font-size: 3rem; } }
   .titles__line {
     width: 100%;
