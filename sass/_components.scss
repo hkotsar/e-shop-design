@@ -1281,6 +1281,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.5s;
 
         & > img {
             
@@ -1308,11 +1309,13 @@
         &--left {
             left: 10%;
             transform: translate(-50%, -50%);
+            opacity: 0.9;
         }
 
         &--right {
             right: 10%;
             transform: translate(50%, -50%);
+            opacity: 0.9;
         }
 
         &--icon {
@@ -1421,4 +1424,33 @@
             margin-right: 1.5rem;
         }
     }
+
+    &__dots {
+        position: absolute;
+        bottom: 5%;
+    }
+
+    &__dot {
+        border: none;
+        background-color: #b9b9b9;
+        opacity: 0.7;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        margin-right: 1.75rem;
+        cursor: pointer;
+        transition: all 0.5s;
+        
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &--active {
+            background-color: $primary;
+            opacity: 1;
+        }
+    }
 }
+
+
