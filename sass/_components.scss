@@ -1091,6 +1091,7 @@
 .pro-phone {
     display: none;
 
+
     @include respond(phone) {
         white-space: nowrap;
         position: fixed;
@@ -1102,6 +1103,7 @@
         overflow-y: hidden;
         background: #fff;
         height: 17rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
        
 
         &::-webkit-scrollbar {
@@ -1229,3 +1231,194 @@
     }
 }
 
+
+// DETAILS SLIDER
+.details {
+    margin-top: -10rem;
+    width: 120rem;
+    margin: auto;
+
+    display: flex;
+
+    @include respond(tab-port) {
+        margin-top: -15rem;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    &__slider {
+        flex: 0 0 30%;
+        
+        position: relative;
+        display: flex;
+        justify-content: center;
+        
+        margin: auto;
+        height: 42rem;
+        width: 40rem;
+        border-radius: 10px;
+        // max-width: 50rem;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+
+        @include respond(tab-port) {
+            flex: none;
+        }
+
+        @include respond(phone) {
+            width: 35rem;
+        }
+    }
+
+    &__slide {
+        
+        position: absolute;
+        
+        width: 100%;
+        height: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > img {
+            
+            height: 100%;
+            width: 30rem;
+            margin: auto;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: $primary;
+        padding: 1rem 1.2rem;
+        width: 5rem;
+        border: none;
+        cursor: pointer;
+
+        &--left {
+            left: 10%;
+            transform: translate(-50%, -50%);
+        }
+
+        &--right {
+            right: 10%;
+            transform: translate(50%, -50%);
+        }
+
+        &--icon {
+            width: 3rem;
+            height: 3rem;
+            
+        }
+    }
+
+    &__desc {
+        flex: 1;
+        padding-top: 20rem;
+        margin: 5rem;
+
+        @include respond(tab-port) {
+            padding-top: 3rem;
+        }
+
+        &--head {
+            display: flex;
+            align-items: center;
+
+            @include respond(phone) {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 2.7rem;
+                
+                @include respond(phone) {
+                    font-size: 2.2rem;
+                }
+            }
+
+            span {
+                font-size: 3.2rem;
+                font-weight: bold;
+                margin-left: auto;
+
+                @include respond(phone) {
+                    margin: auto;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        &--body {
+            margin-top: 1rem;
+
+            p {
+                font-size: 1.6rem;
+                font-weight: bold;
+
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                    // text-align: center;
+                }
+            }
+        }
+
+        &--list {
+            margin: 3rem 0rem;
+
+            @include respond(phone) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &--item {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0rem;
+
+            span {
+                font-size: 1.6rem;
+
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                    width: 30rem;
+                }
+            }
+        }
+
+        &--icon {
+            width: 3rem;
+            height: 3rem;
+            fill: $primary;
+            margin-right: 2rem;
+
+            @include respond(phone) {
+                width: 2rem !important;
+                height: 2rem !important;
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        flex-direction: column;
+
+        &--icon {
+            width: 2.7rem;
+            height: 2.7rem;
+            margin-right: 1.5rem;
+        }
+    }
+}

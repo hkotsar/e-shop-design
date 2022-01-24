@@ -169,3 +169,16 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.section-details {
+    margin-top: -20rem;
+    padding-bottom: 4rem;
+
+    @include respond(tab-port) {
+        margin-top: 0rem;
+    }
+}
+
+.section-other_products {
+    padding-bottom: 8rem;
+}

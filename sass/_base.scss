@@ -99,6 +99,27 @@ body {
         padding: 1rem;
     }
 
+    &--cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary;
+        padding: .8rem;
+        border-radius: 10px !important;
+        color: #000;
+    }
+
+    &--buy {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $gray;
+        padding: .8rem;
+        border-radius: 10px !important;
+        color: #fff;
+    }
+
     &--icon {
         width: 2.5rem;
         height: 2.5rem;
