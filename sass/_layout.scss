@@ -41,6 +41,20 @@
         height: 60vh;
     }
 
+    &--details {
+        height: 60vh;
+        background-image: url('../img/sincerely-media-4dSXcNTyXaI-unsplash.jpg');
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 0rem 5rem;
+        overflow: hidden;
+
+        @include respond(phone) {
+            height: 40vh;
+        }
+    }
+
    
 
     &__center {
