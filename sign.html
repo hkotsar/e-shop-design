@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In/Up</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/local_grocery_store.png" type="image/png"/>
+</head>
+<body>
+    <div class="navigation__section">
+        <div class="nav">
+            <nav class="nav__navi">
+                <a class="nav__link" href="index.html">
+                    <span class="nav__link--visible">
+                        <svg class="nav__link--icon">
+                            <use xlink:href="css/icons.svg#icon-home"></use>
+                        </svg>
+                    </span>
+                    <span class="nav__link--invisible">HOME</span>
+                </a>
+                <a class="nav__link" href="products.html">
+                    <span class="nav__link--visible">
+                        <svg class="nav__link--icon">
+                            <use xlink:href="css/icons.svg#icon-dashboard"></use>
+                        </svg>
+                    </span>
+                    <span class="nav__link--invisible">PRODUCTS</span>
+                </a>
+                <button class="nav__btn cartBtn">
+                    <span class="cartIcon-1 nav__btn--visible-1">
+                        <svg class="nav__btn--icon">
+                            <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                        </svg>
+                    </span>
+                    <span class="cartIcon-2 nav__btn--invisible-2">
+                        <svg class="nav__btn--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </span>
+                </button>
+                <a class="nav__link" href="index.html#contact">
+                    <span class="nav__link--visible">
+                        <svg class="nav__link--icon">
+                            <use xlink:href="css/icons.svg#icon-email"></use>
+                        </svg>
+                    </span>
+                    <span class="nav__link--invisible">CONTACT</span>
+                </a>
+                <a class="nav__link" href="sign.html">
+                    <span class="nav__link--visible">
+                        <svg class="nav__link--icon">
+                            <use xlink:href="css/icons.svg#icon-person"></use>
+                        </svg>
+                    </span>
+                    <span class="nav__link--invisible">SIGN IN</span>
+                </a>
+    
+                <!-- <a class="nav__link" href="#">
+                    <span class="nav__link--visible">PRODUCT</span>
+                    <span class="nav__link--invisible">PRODUCT ICON</span>
+                </a> -->
+            </nav>
+        </div>
+        <div class="phone">
+            <div class="phone__nav">
+                <nav>
+                    <a class="phone__nav--link" href="index.html">
+                        <span>
+                            <svg class="nav__link--icon">
+                                <use xlink:href="css/icons.svg#icon-home"></use>
+                            </svg>
+                        </span>
+                        <span>HOME</span>
+                    </a>
+                    <a class="phone__nav--link" href="products.html">
+                        <span>
+                            <svg class="nav__link--icon">
+                                <use xlink:href="css/icons.svg#icon-dashboard"></use>
+                            </svg>
+                        </span>
+                        <span>PRODUCTS</span>
+                    </a>
+                    <button class="nav__btn cartBtn">
+                        <span class="cartIconPhone-1 nav__btn--visible-1">
+                            <svg class="nav__btn--icon">
+                                <use xlink:href="css/icons.svg#icon-local_grocery_store"></use>
+                            </svg>
+                        </span>
+                        <span class="cartIconPhone-2 nav__btn--invisible-2">
+                            <svg class="nav__btn--icon">
+                                <use xlink:href="css/icons.svg#icon-clear"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <a class="phone__nav--link" href="index.html#contact">
+                        <span>
+                            <svg class="nav__link--icon">
+                                <use xlink:href="css/icons.svg#icon-email"></use>
+                            </svg>
+                        </span>
+                        <span>CONTACT</span>
+                    </a>
+                    <a class="phone__nav--link" href="sign.html">
+                        <span>
+                            <svg class="nav__link--icon">
+                                <use xlink:href="css/icons.svg#icon-person"></use>
+                            </svg>
+                        </span>
+                        <span>SIGNIN</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="cart cart__hidden" id="cart">
+            <div class="cart__list">
+                <div class="cart__item">
+                    <img class="cart__item--img" src="/img/iphone-12.png" alt="iphone">
+                    <span class="cart__item--qty">1x</span>
+                    <span class="cart__item--name">Iphone 12 64GB</span>
+                    <span class="cart__item--price">999.99€</span>
+                    <button class="cart__item--btn">
+                        <svg class="cart__item--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="cart__item">
+                    <img class="cart__item--img" src="/img/iphone13.png" alt="iphone">
+                    <span class="cart__item--qty">1x</span>
+                    <span class="cart__item--name">Iphone 13 Pro 64GB</span>
+                    <span class="cart__item--price">999.99€</span>
+                    <button class="cart__item--btn">
+                        <svg class="cart__item--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="cart__item">
+                    <img class="cart__item--img" src="/img/iphone12_256gb.png" alt="iphone">
+                    <span class="cart__item--qty">1x</span>
+                    <span class="cart__item--name">Iphone 12 256GB</span>
+                    <span class="cart__item--price">999.99€</span>
+                    <button class="cart__item--btn">
+                        <svg class="cart__item--icon">
+                            <use xlink:href="css/icons.svg#icon-clear"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="cart__checkout">
+                <div class="cart__checkout--total">
+                    <span>Total:</span>
+                    <span>1999.98€</span>
+                </div>
+                <button class="cart__checkout--btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+    <section class="section-sign">
+        <div class="form-container">
+            <div class="sign">
+                <form action="#" class="sign__in">
+                    <h2 class="sign__title">Sign in</h2>
+                    <div class="sign__group">
+                        <svg class="sign__group--icon">
+                            <use xlink:href="css/icons.svg#icon-email"></use>
+                        </svg>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="sign__group">
+                        <svg class="sign__group--icon">
+                            <use xlink:href="css/icons.svg#icon-locked"></use>
+                        </svg>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <button class="btn btn--sign">LOGIN</button>
+                </form>
+                <form action="#" class="sign__up">
+                    <h2 class="sign__title">Sign up</h2>
+                    <div class="sign__group">
+                        <svg class="sign__group--icon">
+                            <use xlink:href="css/icons.svg#icon-email"></use>
+                        </svg>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="sign__group">
+                        <svg class="sign__group--icon">
+                            <use xlink:href="css/icons.svg#icon-user-solid-circle"></use>
+                        </svg>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="sign__group">
+                        <svg class="sign__group--icon">
+                            <use xlink:href="css/icons.svg#icon-locked"></use>
+                        </svg>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="sign__group">
+                        <svg class="sign__group--icon">
+                            <use xlink:href="css/icons.svg#icon-locked"></use>
+                        </svg>
+                        <input type="password" placeholder="Password again">
+                    </div>
+                    <button  class="btn btn--sign">SIGN UP</button>
+                </form>
+            </div>
+            <div class="panel-container">
+                <div class="panel panel__left">
+                    <div class="panel__content">
+                        <h2>Sign Up Here</h2>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button class="btn btn--sign-2 signup">SIGN UP</button>
+                    </div>
+                </div>
+                <div class="panel panel__right">
+                    <div class="panel__content">
+                        <h2>Sign In Here</h2>
+                        <p>If already have a account</p>
+                        <button class="btn btn--sign-2 signin">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="main.js"></script>
+    <script src="sign.js"></script>
+   
+
+</body>
+</html>

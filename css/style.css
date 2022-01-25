@@ -88,6 +88,21 @@ body {
   border-radius: 10px !important;
   color: #fff; }
 
+.btn--sign {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: #86C232;
+  width: 15rem;
+  color: #222629;
+  box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24); }
+
+.btn--sign-2 {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff; }
+
 .btn--icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -1241,3 +1256,211 @@ body {
     .details__dot--active {
       background-color: #86C232;
       opacity: 1; }
+
+.section-sign {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden; }
+  @media (max-width: 37.5em) {
+    .section-sign {
+      min-height: 800px;
+      height: 100vh; } }
+  .section-sign:before {
+    content: "";
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    background: #86C232;
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: 6; }
+    @media (max-width: 37.5em) {
+      .section-sign:before {
+        width: 1500px;
+        height: 1500px;
+        transform: translateX(-50%);
+        left: 30%;
+        bottom: 68%;
+        right: initial;
+        top: initial;
+        transition: 2s ease-in-out; } }
+
+.form-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+@media (max-width: 37.5em) {
+  .sign, .section-sign.sign-mode .sign {
+    left: 50%; } }
+
+.sign {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 75%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5; }
+  .sign h2 {
+    font-size: 3.5rem; }
+  @media (max-width: 37.5em) {
+    .sign {
+      width: 100%;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      transition: 1s 0.8s ease-in-out; } }
+  .sign form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; }
+  .sign__group {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0rem;
+    border-radius: 20px;
+    width: 40rem; }
+    @media (max-width: 37.5em) {
+      .sign__group {
+        width: 35rem; } }
+    .sign__group input {
+      padding: .8rem 1rem;
+      border: none;
+      font-size: 1.6rem;
+      outline: none;
+      width: 100%; }
+    .sign__group--icon {
+      width: 2.2rem;
+      height: 2.2rem; }
+  .sign__up {
+    opacity: 0;
+    z-index: 1; }
+  .sign__in {
+    z-index: 2; }
+    @media (max-width: 37.5em) {
+      .sign__in {
+        margin-top: 10rem; } }
+
+.panel-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 37.5em) {
+    .panel-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr 1fr; } }
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6; }
+  @media (max-width: 37.5em) {
+    .panel {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2.5rem 8%;
+      grid-column: 1 / 2; } }
+  .panel__left {
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%; }
+    @media (max-width: 37.5em) {
+      .panel__left {
+        grid-row: 1 / 2; } }
+  .panel__right {
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%; }
+    @media (max-width: 37.5em) {
+      .panel__right {
+        grid-row: 3 / 4; } }
+  .panel__content {
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+    color: #fff; }
+    .panel__content h2 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem; }
+    .panel__content p {
+      font-size: 1.9rem; }
+  .panel__right .panel__content {
+    transform: translateX(800px); }
+    @media (max-width: 37.5em) {
+      .panel__right .panel__content {
+        transform: translateY(300px); } }
+
+.panel .panel__content {
+  padding-right: 15%;
+  transition: transform 0.9s ease-in-out;
+  transition-delay: 0.8s; }
+
+.section-sign.sign-mode:before {
+  transform: translate(100%, -50%);
+  right: 52%; }
+  @media (max-width: 37.5em) {
+    .section-sign.sign-mode:before {
+      transform: translate(-50%, 100%);
+      bottom: 32%;
+      right: initial; } }
+
+.section-sign.sign-mode .panel__left .panel__content {
+  transform: translateX(-800px); }
+  @media (max-width: 37.5em) {
+    .section-sign.sign-mode .panel__left .panel__content {
+      transform: translateY(-300px); } }
+
+.section-sign.sign-mode .sign {
+  left: 25%; }
+  @media (max-width: 37.5em) {
+    .section-sign.sign-mode .sign {
+      left: 50%;
+      margin: auto;
+      top: 30%;
+      transform: translate(-50%, -50%); } }
+
+.section-sign.sign-mode form.sign__up {
+  opacity: 1;
+  z-index: 2; }
+
+.section-sign.sign-mode form.sign__in {
+  opacity: 0;
+  z-index: 1; }
+
+.section-sign.sign-mode .panel__right .panel__content {
+  transform: translateX(0%); }
+  @media (max-width: 37.5em) {
+    .section-sign.sign-mode .panel__right .panel__content {
+      transform: translateY(-70px); } }
+
+.section-sign.sign-mode .panel__left {
+  pointer-events: none; }
+
+.section-sign.sign-mode .panel__right {
+  pointer-events: all; }
+
+@media (max-width: 37.5em) {
+  .panel__right .panel__content {
+    transform: translateY(300px); } }

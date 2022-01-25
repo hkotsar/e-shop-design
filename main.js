@@ -5,8 +5,6 @@ const invisbleIcon = document.querySelector('.cartIcon-2')
 const visibleIconPhone = document.querySelector('.cartIconPhone-1')
 const invisibleIconPhone = document.querySelector('.cartIconPhone-2')
 
-
-
 const visible = [visbleIcon, visibleIconPhone]
 const invisible = [invisbleIcon, invisibleIconPhone]
 
@@ -56,6 +54,10 @@ window.addEventListener('scroll', function () {
     }
 })
 
+
+
+
+
 // PRODUCT FILTER (PHONE)
 const filter = document.querySelector('.pro-phone')
 const filterOpen = document.querySelector('.filter__btn')
@@ -73,6 +75,9 @@ const closeFilter = function () {
 
 filterOpen.addEventListener('click', openFilter);
 filterClose.addEventListener('click', closeFilter);
+
+
+
 
 
 

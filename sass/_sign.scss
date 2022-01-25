@@ -1,0 +1,287 @@
+.section-sign {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+    @include respond(phone) {
+        min-height: 800px;
+        height: 100vh;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        height: 2000px;
+        width: 2000px;
+        top: -10%;
+        right: 48%;
+        transform: translateY(-50%);
+        background: $primary;
+        transition: 1.8s ease-in-out;
+        border-radius: 50%;
+        z-index: 6;
+
+        @include respond(phone) {
+            width: 1500px;
+            height: 1500px;
+            transform: translateX(-50%);
+            left: 30%;
+            bottom: 68%;
+            right: initial;
+            top: initial;
+            transition: 2s ease-in-out;
+        }
+    }
+}
+
+.form-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.sign, .section-sign.sign-mode .sign {
+    @include respond(phone) {
+        left: 50%;
+    }
+}
+
+.sign {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 75%;
+    width: 50%;
+    transition: 1s 0.7s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        transition: 1s 0.8s ease-in-out;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0rem 5rem;
+        transition: all 0.2s 0.7s;
+        overflow: hidden;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        padding: 1rem 1.5rem;
+        margin: 1rem 0rem;
+        border-radius: 20px;
+        width: 40rem;
+
+        @include respond(phone) {
+            width: 35rem;
+        }
+
+        input {
+            // margin: 1rem 0rem;
+            padding: .8rem 1rem;
+            border: none;
+            font-size: 1.6rem;
+            outline: none;
+            width: 100%;
+
+            
+        }
+
+        &--icon {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+
+    
+
+    &__up {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    &__in {
+        z-index: 2;
+
+        @include respond(phone) {
+            margin-top: 10rem;
+        }
+    }
+}
+
+// PANELS
+.panel-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 6;
+
+    @include respond(phone) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2.5rem 8%;
+        grid-column: 1 / 2;
+    }
+
+    &__left {
+        pointer-events: all;
+        padding: 3rem 17% 2rem 12%;
+
+        @include respond(phone) {
+            grid-row: 1 / 2;
+        }
+    }
+
+    &__right {
+        pointer-events: none;
+        padding: 3rem 12% 2rem 17%;
+
+        @include respond(phone) {
+            grid-row: 3 / 4;
+        }
+    }
+
+    &__content {
+        
+        transition: transform 0.9s ease-in-out;
+        transition-delay: 0.6s;
+        color: #fff;
+
+        h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+
+            font-size: 1.9rem;
+        }
+    }
+
+    &__right &__content {
+        transform: translateX(800px);
+
+        @include respond(phone) {
+            transform: translateY(300px);
+        }
+    }
+}
+
+.panel .panel__content {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+}
+
+ // ANIMATION
+
+//  CONTAINER
+// //////////////////////////////
+.section-sign.sign-mode:before {
+    transform: translate(100%, -50%);
+    right: 52%;
+
+    @include respond(phone) {
+        transform: translate(-50%, 100%);
+        bottom: 32%;
+        right: initial;
+    }
+}
+// //////////////////////////////////
+
+.section-sign.sign-mode .panel__left .panel__content {
+    transform: translateX(-800px);
+
+    @include respond(phone) {
+        transform: translateY(-300px);
+    }
+}
+
+.section-sign.sign-mode .sign {
+    left: 25%;
+
+    @include respond(phone) {
+        left: 50%;
+        margin: auto;
+        top: 30%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.section-sign.sign-mode form.sign__up {
+    opacity: 1;
+    z-index: 2;
+
+    @include respond(phone) {
+
+    }
+}
+  
+.section-sign.sign-mode form.sign__in {
+    opacity: 0;
+    z-index: 1;
+
+}
+ 
+.section-sign.sign-mode .panel__right .panel__content {
+    transform: translateX(0%);
+
+    @include respond(phone) {
+        transform: translateY(-70px);
+    }
+}
+
+
+
+.section-sign.sign-mode .panel__left {
+    pointer-events: none;
+}
+  
+.section-sign.sign-mode .panel__right {
+    pointer-events: all;
+}
+
+.panel__right .panel__content {
+    @include respond(phone) {
+        transform: translateY(300px);
+    }
+}
