@@ -1465,7 +1465,7 @@ body {
   transform: translateX(0%); }
   @media (max-width: 37.5em) {
     .section-sign.sign-mode .panel__right .panel__content {
-      transform: translateY(-60px); } }
+      transform: translateY(-50px); } }
 
 .section-sign.sign-mode .panel__left {
   pointer-events: none; }

@@ -271,7 +271,7 @@
     transform: translateX(0%);
 
     @include respond(phone) {
-        transform: translateY(-60px);
+        transform: translateY(-50px);
     }
 }
 
