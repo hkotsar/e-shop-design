@@ -380,7 +380,8 @@
         animation-duration: 3s;
 
         @include respond(phone) {
-            width: 100%;
+            margin: auto;
+            width: 30rem;
             font-size: 3rem;
         }
     }

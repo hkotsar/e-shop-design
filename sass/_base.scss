@@ -138,8 +138,8 @@ body {
     }
 
     &--icon {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2.2rem;
+        height: 2.2rem;
         margin-right: .7rem;
     }
 
@@ -147,6 +147,12 @@ body {
         transform: translateY(-3px);
         box-shadow: 0 10rem 20rem rgba(#333,.2);
     }
+}
+
+.all-products-btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5rem;
 }
 
 .green {

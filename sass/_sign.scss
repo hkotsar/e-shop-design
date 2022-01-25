@@ -6,21 +6,24 @@
 
     @include respond(phone) {
         min-height: 800px;
-        height: 100vh;
+        height: 110vh;
     }
 
     &:before {
         content: "";
         position: absolute;
-        height: 2000px;
-        width: 2000px;
+        height: 200rem;
+        width: 200rem;
         top: -10%;
         right: 48%;
         transform: translateY(-50%);
-        background: $primary;
+        // background: $primary;
+        background-image: url('../img/sincerely-media-4dSXcNTyXaI-unsplash.jpg');
         transition: 1.8s ease-in-out;
         border-radius: 50%;
         z-index: 6;
+
+        
 
         @include respond(phone) {
             width: 1500px;
@@ -119,6 +122,7 @@
     &__up {
         opacity: 0;
         z-index: 1;
+        height: 70rem;
     }
 
     &__in {
@@ -177,6 +181,7 @@
 
         @include respond(phone) {
             grid-row: 3 / 4;
+            padding: 3rem 12% 8rem 17%;
         }
     }
 
@@ -222,7 +227,7 @@
 
     @include respond(phone) {
         transform: translate(-50%, 100%);
-        bottom: 32%;
+        bottom: 37%;
         right: initial;
     }
 }

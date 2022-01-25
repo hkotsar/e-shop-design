@@ -150,7 +150,9 @@
 }
 
 .container-2 {
-    padding: 10rem 0rem;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+
 
     @include respond(phone) {
         padding: 7rem 0rem;
@@ -158,8 +160,12 @@
 }
 
 .section-contact {
-    padding: 6rem 0rem;
+    padding: 10rem 0rem;
     background: #474B4F;
+
+    @include respond(phone) {
+        padding: 7rem 0rem;
+    }
 }
 
 .section-footer {
